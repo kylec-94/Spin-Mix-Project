@@ -1,0 +1,35 @@
+.container-fluid {
+	width: 100%;
+	background-color: black;
+}
+
+/*.App {
+
+	background-color: black;
+}*/
+
+.bio {
+	margin-top: 7%;
+	color: #e2e4e1;
+	font-size: 25px;
+}
+
+#root {
+
+	background-color: black;
+}
+
+#login-route {
+
+	background-color: #547dab;
+	margin-right: 10%;
+	color: white;
+}
+
+#new-account {
+
+	background-color: #547dab;
+	color: white;
+	margin-left: 10%;
+}
+

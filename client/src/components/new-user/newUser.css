@@ -1,0 +1,46 @@
+body, html {
+
+    height: 100%;
+    
+}
+
+
+
+body {
+
+background-color: black;
+
+}
+
+#instructions {
+    
+}
+
+#root {
+    background: url(./newUserBackground.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position-y: top;
+}
+
+.row {
+
+    margin-top: 5%;
+}
+
+.last-name {
+
+	margin-left: 5px;
+}
+
+#spin-mix-title {
+
+	font-family: "Courier New";
+	font-size: 55px;
+	font-weight: bold;
+}
+
+.panel-body {
+
+	opacity: 0.75;
+}

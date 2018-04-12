@@ -1,0 +1,60 @@
+<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
+
+<div className="row">
+
+	<div className="col-md-12">
+
+		<div className="panel panel-default">
+
+			<div className="panel-heading text-center">`Here are your results!`
+
+			{{#each user}}
+
+				<div className="user-well">
+
+					Name: {{user.aliasOrg}}
+					<br>
+					City: {{user.city}}
+					<br>
+					Email: {{user.email}}
+					<br>
+
+					{{#if user.barClub}}
+					Bar/Club: Yes
+					<br>
+					{{/if}}
+					{{#if user.djPerformer}}
+					DJ/Performer: Yes
+					<br>
+					{{/if}}
+
+					Music Genres: {{user.musicGenres}}
+					<br>
+					<span>
+					{{#if user.soundcloud}}
+					<a href="{{user.soundcloud}}"><i height="50" width="50" className="fab fa-soundcloud"></i></a>
+					<br>
+					{{/if}}
+					{{#if user.twitter}}
+					<a href="{{user.twitter}}"><i height="50" width="50" className="fab fa-twitter"></i></a>
+					<br>
+					{{/if}}
+					{{#if user.facebook}}
+					<a href="{{user.facebook}}"><i height="50" width="50" className="fab fa-facebook"></i></a>
+					<br>
+					{{/if}}
+					{{#if user.instagram}}
+					<a href="{{user.instagram}}"><i height="50" width="50" className="fab fa-instagram"></i></a>
+					<br>
+					{{/if}}
+					</span>
+				</div>
+
+			
+
+		</div>
+
+	</div>
+
+</div>
