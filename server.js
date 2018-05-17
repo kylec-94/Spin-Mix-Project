@@ -10,13 +10,17 @@ const app = express();
 // ******* SETTING UP MONGODB ******* //
 
 // If deployed, use the deployed database. Otherwise use the local database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db";
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db";
 
 
 // Configure mongoose to use Promises, because callbacks are passe.
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db",
+  {
+    useMongoClient: true
+  }
+);
 
 // ********************************** // 
 
