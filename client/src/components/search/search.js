@@ -78,7 +78,7 @@ render() {
 
       <div id="description" className="col-lg-8 col-lg-offset-2">
           <div className="">
-              <div className="bio text-center">
+              <div className="bio text-center" id="instructions">
                   To get started, type the name of a city into the search bar
                   and either hit "enter", or click the "Search" button.
               </div>

@@ -4,8 +4,13 @@
 	font-size: 20px;
 }
 
-.bio {
+#instructions {
+	margin-top: 15%;
+}
 
+.bio {
+	
+	margin-top: 15%;
 	color: #e2e4e1;
 	font-size: 20px;
 }

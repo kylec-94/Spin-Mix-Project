@@ -3,7 +3,7 @@ const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 const app = express();
 
 
@@ -52,6 +52,6 @@ app.get("*", function(req, res) {
 });
 
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
