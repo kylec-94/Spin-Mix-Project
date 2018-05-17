@@ -3,7 +3,14 @@ const passport = require('passport');
 const router = express.Router();
 const User = require('../controllers/userController');
 
+// Serve up static assets (usually on heroku)
+router.use(express.static("client/build"));
 
+// Send every request to the React app
+// Define any API routes before this runs
+router.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 function getCurrentUser(req, res) {
     // I'm picking only the specific fields its OK for the audience to see publicly
