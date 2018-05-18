@@ -3,24 +3,20 @@ const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 
-// const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 
 // ******* SETTING UP MONGODB ******* //
 
 // If deployed, use the deployed database. Otherwise use the local database
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db";
 
 
 // Configure mongoose to use Promises, because callbacks are passe.
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/spin_mix_db",
-  {
-    useMongoClient: true
-  }
-);
+mongoose.connect(MONGODB_URI);
 
 // ********************************** // 
 
@@ -56,6 +52,6 @@ app.get("*", function(req, res) {
 });
 
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
